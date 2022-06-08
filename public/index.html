@@ -7,12 +7,22 @@
     <script src="/js/script.js"></script>
   </head>
   <body>
-    <div id="map"></div>
+    <div class="map-wrapper">
+      <div id="map"></div>
+      <form id="form-wrapper">
+        <input type="button" class="btn" value='Google to Amazon' data-lat='47.61418' data-lon='-122.199362' />
+        <input type="button" class="btn" value='Google to Microsoft' data-lat='47.639378' data-lon='-122.128259' />
+        <input type="button" class="btn" value='Google to Apple' data-lat='47.663979' data-lon='-122.297542' />
+        <input type="button" class="btn" value='Google to Amazon to Microsoft' data-waypoint='true' data-lat1='47.61418' data-lon1='-122.199362' data-lat2='47.639378' data-lon2='-122.128259' />
+      </form>
+      <div id="directions-panel"></div>
+    </div>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAe446K3DVXhvVDWNI9ua3_1LOGxpApEhM&callback=initMap&v=weekly"
       async
     ></script>
+    <script src="/js/formScript.js"></script>
   </body>
 </html>
